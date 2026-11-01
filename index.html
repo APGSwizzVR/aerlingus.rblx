@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006272">
+  <meta name="description" content="Aer Lingus Roblox — virtual airline homepage. Explore routes, manage your virtual trip and check flight information.">
+  <title>Aer Lingus Roblox | Home</title>
+  <link rel="preconnect" href="https://www.aerlingus.com">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="top-strip">
+    <div class="shell top-strip-inner">
+      <span>Unofficial Aer Lingus virtual airline on Roblox</span>
+      <div><a href="#support">Support</a><a href="#footer">Contact</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell header-main">
+      <a class="brand" href="/" aria-label="Aer Lingus Roblox home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span class="brand-name">Aer Lingus</span>
+        <span class="brand-sub">ROBLOX VIRTUAL AIRLINE</span>
+      </a>
+      <div class="header-actions">
+        <a href="#booking" class="header-link">Manage Trip</a>
+        <a href="#aerclub" class="header-link">AerClub log in</a>
+        <a class="join-button" href="#join">Join our airline</a>
+      </div>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="shell nav-inner">
+        <a href="#booking" class="nav-item">Book</a>
+        <a href="#prepare" class="nav-item">Prepare</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#aerclub" class="nav-item">AerClub</a>
+        <a href="#support" class="nav-item">Support</a>
+      </div>
+    </nav>
+    <div class="mobile-nav" hidden>
+      <a href="#booking">Book</a><a href="#prepare">Prepare</a><a href="#experience">Experience</a><a href="#aerclub">AerClub</a><a href="#support">Support</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Main offers">
+      <div class="hero-slide active" data-slide="0">
+        <img src="https://www.aerlingus.com/media/images/destinations/ireland/kerry/ring-of-kerry-hp.jpg" alt="Ring of Kerry">
+        <div class="hero-shade"></div>
+        <div class="shell hero-copy">
+          <p class="eyebrow">Great deals to</p>
+          <h1>Ireland</h1>
+          <a class="light-button" href="#booking">Book my flights</a>
+        </div>
+      </div>
+      <div class="hero-slide" data-slide="1">
+        <img src="https://www.aerlingus.com/media/images/destinations/usa/chicago/chicago-skyline-dawn2-hp.jpg" alt="View of Chicago skyline at dawn">
+        <div class="hero-shade"></div>
+        <div class="shell hero-copy">
+          <p class="eyebrow">North America via Dublin</p>
+          <h1>Big cities,<br>even bigger adventures</h1>
+          <p>Save time and avoid queues with U.S. Customs and Border Protection pre-clearance at Dublin.</p>
+          <a class="light-button" href="#booking">Save now</a>
+        </div>
+      </div>
+      <div class="hero-controls" aria-label="Choose main offer">
+        <button class="hero-dot active" data-go="0" aria-label="Show Ireland offer"></button>
+        <button class="hero-dot" data-go="1" aria-label="Show North America offer"></button>
+        <button class="hero-arrow prev" aria-label="Previous offer">‹</button>
+        <button class="hero-arrow next" aria-label="Next offer">›</button>
+      </div>
+    </section>
+
+    <section class="booking-wrap shell" id="booking">
+      <div class="booking-card">
+        <div class="booking-tabs" role="tablist" aria-label="Travel tools">
+          <button class="booking-tab active" role="tab" aria-selected="true" data-tab="flights">Find Flights</button>
+          <button class="booking-tab" role="tab" aria-selected="false" data-tab="manage">Manage Trip</button>
+          <button class="booking-tab" role="tab" aria-selected="false" data-tab="checkin">Check in</button>
+          <button class="booking-tab" role="tab" aria-selected="false" data-tab="status">Flight Status</button>
+        </div>
+
+        <div class="booking-panel active" id="panel-flights" role="tabpanel">
+          <form id="flight-search" class="booking-form">
+            <div class="trip-types" role="group" aria-label="Trip type">
+              <label><input type="radio" name="tripType" value="round" checked> Round Trip</label>
+              <label><input type="radio" name="tripType" value="one"> One Way</label>
+              <label><input type="radio" name="tripType" value="multi"> Multi-City</label>
+            </div>
+            <div class="form-grid">
+              <label class="field"><span>From</span><select required name="origin"><option value="">Select departure airport</option><option>Dublin (DUB)</option><option>Cork (ORK)</option><option>Shannon (SNN)</option><option>London Heathrow (LHR)</option></select></label>
+              <button type="button" class="swap-button" id="swap-route" aria-label="Reverse route">⇄</button>
+              <label class="field"><span>To</span><select required name="destination"><option value="">Select destination airport</option><option>London Heathrow (LHR)</option><option>New York (JFK)</option><option>Boston (BOS)</option><option>Chicago (ORD)</option><option>Paris (CDG)</option><option>Amsterdam (AMS)</option><option>Faro (FAO)</option><option>Madeira (FNC)</option><option>Dublin (DUB)</option></select></label>
+              <label class="field"><span>Departure Date</span><input type="date" name="departure" required></label>
+              <label class="field return-field"><span>Return Date</span><input type="date" name="return" required></label>
+              <label class="field"><span>Passengers</span><select name="passengers"><option>1 Passenger</option><option>2 Passengers</option><option>3 Passengers</option><option>4 Passengers</option><option>5 Passengers</option><option>6 Passengers</option></select></label>
+              <label class="field"><span>Promo Code (Optional)</span><input name="promo" placeholder="Enter your promo code"></label>
+            </div>
+            <div class="booking-bottom">
+              <label class="check-option"><input type="checkbox" name="group"> Group booking (7-25 People)</label>
+              <button class="primary-button" type="submit">Search Flights</button>
+            </div>
+            <p class="form-message" id="flight-message" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="booking-panel" id="panel-manage" role="tabpanel" hidden>
+          <form class="simple-form" id="manage-form">
+            <h2>Manage your upcoming trip</h2>
+            <div class="form-grid two">
+              <label class="field"><span>Booking Reference</span><input name="reference" placeholder="Enter booking reference" required></label>
+              <label class="field"><span>Family Name</span><input name="surname" placeholder="Enter family name" required></label>
+            </div>
+            <button class="primary-button" type="submit">Manage Trip</button>
+            <p class="form-message" aria-live="polite"></p>
+            <p class="small-note">Can't find your booking? Search by booking reference instead to manage your upcoming trip.</p>
+          </form>
+        </div>
+
+        <div class="booking-panel" id="panel-checkin" role="tabpanel" hidden>
+          <form class="simple-form" id="checkin-form">
+            <h2>Check in for your upcoming flight</h2>
+            <div class="form-grid two">
+              <label class="field"><span>Booking Reference</span><input name="reference" placeholder="Enter booking reference" required></label>
+              <label class="field"><span>Family Name</span><input name="surname" placeholder="Enter family name" required></label>
+            </div>
+            <button class="primary-button" type="submit">Check in</button>
+            <p class="form-message" aria-live="polite"></p>
+            <p class="small-note">Need help with check in? See our online check in information.</p>
+          </form>
+        </div>
+
+        <div class="booking-panel" id="panel-status" role="tabpanel" hidden>
+          <form class="simple-form" id="status-form">
+            <h2>Get up to date information on departures and arrivals</h2>
+            <div class="status-options">
+              <label><input type="radio" name="statusType" value="city" checked> Search by City</label>
+              <label><input type="radio" name="statusType" value="number"> Flight Number</label>
+            </div>
+            <div class="form-grid two">
+              <label class="field"><span>From</span><select name="statusFrom"><option>Dublin (DUB)</option><option>Cork (ORK)</option><option>London Heathrow (LHR)</option></select></label>
+              <label class="field"><span>To</span><select name="statusTo"><option>London Heathrow (LHR)</option><option>Dublin (DUB)</option><option>New York (JFK)</option></select></label>
+              <label class="field"><span>Flight Number (Optional)</span><input name="flightNumber" placeholder="EI 123"></label>
+              <label class="field"><span>Travel Date</span><input type="date" name="statusDate" required></label>
+            </div>
+            <button class="primary-button" type="submit">Check Flight Status</button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell quick-links">
+      <a href="#support"><span class="quick-icon">✈</span><span><b>Essential Travel Information</b><small>Latest travel updates</small></span><span class="chevron">›</span></a>
+      <a href="#prepare"><span class="quick-icon">▣</span><span><b>10kg carry-on bag options</b><small>Details of our carry-on bag options within Europe</small></span><span class="chevron">›</span></a>
+    </section>
+
+    <section class="shell content-section" id="prepare">
+      <div class="section-heading"><div><p class="eyebrow teal">Plan your journey</p><h2>Travel with Aer Lingus</h2></div><a href="#support" class="text-link">More travel information <span>›</span></a></div>
+      <div class="promo-grid">
+        <article class="promo-card">
+          <img src="https://www.aerlingus.com/media/images/content/smiling-EI-staff-in-airport-curve.jpg" alt="Smiling Aer Lingus airport staff">
+          <div><h3>Partner Offers</h3><p>Hotel Offers</p><p>Search low prices on hotels and much more...</p><a href="#support">Book now ›</a></div>
+        </article>
+        <article class="promo-card">
+          <img src="https://www.aerlingus.com/media/images/content/cabin-baggage-sm-curve.jpg" alt="Carry on bag in open overhead locker">
+          <div><h3>Travel Money</h3><p>Travel Money delivered directly to you</p><a href="#support">Book Now ›</a></div>
+        </article>
+        <article class="promo-card">
+          <img src="https://www.aerlingus.com/media/images/content/bookingcom-3-hotel.jpg" alt="Hotel room with breakfast sitting on a tray on the bed">
+          <div><h3>Save with Avis car hire</h3><p>Save up to 10% when booking your flight</p><a href="#support">Book Car Hire Now ›</a></div>
+        </article>
+        <article class="promo-card">
+          <img src="https://www.aerlingus.com/media/images/content/mixed-currencies.jpg" alt="Mixed currencies displayed on a table">
+          <div><h3>Our Sustainability Journey</h3><p>Committing to net-zero carbon emissions by 2050</p><a href="#experience">Find Out More ›</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fleet-banner" id="experience">
+      <div class="shell fleet-inner">
+        <div><p class="eyebrow">Experience the journey</p><h2>Our Aircraft</h2><p>Discover the aircraft in our virtual fleet.</p><a class="light-button" href="#fleet">Explore our aircraft</a></div>
+        <img src="https://www.aerlingus.com/media/images/content/fleet-new-a321-neo-alt.jpg" alt="Airbus A321neo LR">
+      </div>
+    </section>
+
+    <section class="shell content-section fleet-list" id="fleet">
+      <div class="section-heading"><div><p class="eyebrow teal">The fleet</p><h2>Our Aircraft</h2></div></div>
+      <div class="fleet-tags"><span>Airbus A330-300</span><span>Airbus A330-200</span><span>Airbus A321XLR</span><span>Airbus A321neo LR</span><span>Airbus A320neo</span><span>ATR 72-600</span></div>
+    </section>
+
+    <section class="newsletter" id="aerclub">
+      <div class="shell newsletter-inner">
+        <div><p class="eyebrow">AerClub</p><h2>Sign Up and Save</h2><p>Be first to receive current offers<br>Learn about new and exciting destinations<br>Get the latest travel news and more</p></div>
+        <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Enter your email address" required><button type="submit">Sign Me Up</button><p class="form-message" aria-live="polite"></p></form>
+      </div>
+    </section>
+
+    <section class="shell content-section support-section" id="support">
+      <div class="section-heading"><div><p class="eyebrow teal">Here to help</p><h2>Help &amp; Support</h2></div></div>
+      <div class="support-grid">
+        <a href="#footer"><b>Contact Us</b><span>›</span></a><a href="#footer"><b>Support Site</b><span>›</span></a><a href="#footer"><b>Latest Travel Updates</b><span>›</span></a><a href="#footer"><b>Booking Information</b><span>›</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="shell footer-grid">
+      <div><h3>Help &amp; Support</h3><a href="#support">Contact Us</a><a href="#support">Support</a><a href="#support">Site Map</a><a href="#support">Digital Accessibility</a></div>
+      <div><h3>Get to Know Us</h3><a href="#experience">About Us</a><a href="#experience">Careers</a><a href="#experience">Cargo</a><a href="#experience">Media Centre</a></div>
+      <div><h3>Our Policies</h3><a href="#footer">Legal</a><a href="#footer">Cookie Policy</a><a href="#footer">Privacy Statement</a><a href="#footer">Online Security</a></div>
+      <div><h3>Connect with us</h3><p>Follow our virtual airline community.</p><a href="#join">Join our Roblox group</a><a href="#join">Join our Discord</a></div>
+    </div>
+    <div class="shell footer-bottom"><span>© Aer Lingus Roblox Virtual Airline</span><span>Unofficial Roblox virtual airline. Not affiliated with or endorsed by Aer Lingus or Roblox.</span></div>
+  </footer>
+
+  <section class="join-panel" id="join">
+    <div class="shell join-inner"><div><p class="eyebrow">Fly with us</p><h2>Join Aer Lingus Roblox</h2><p>Take part in our virtual flights and community.</p></div><a class="primary-button" href="#booking">Explore flights</a></div>
+  </section>
+</body>
+</html>
