@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,12 +13,14 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-<a class="brand" href="/" aria-label="Aer Lingus home">
-  <img
-    class="brand-logo"
-    src="https://www.aerlingus.com/media/images/furniture/branding/2019Aer_Lingus_logo_rgb_0.png"
-    alt="Aer Lingus">
-</a>
+  <header class="site-header">
+    <div class="shell header-main">
+      <a class="brand" href="/" aria-label="Aer Lingus home">
+        <img
+          class="brand-logo"
+          src="https://www.aerlingus.com/media/images/furniture/branding/2019Aer_Lingus_logo_rgb_0.png"
+          alt="Aer Lingus">
+      </a>
 
       <div class="header-actions">
         <a href="#booking" class="header-link">Manage Trip</a>
@@ -48,6 +51,8 @@
   </header>
 
   <main id="main">
+
+    <!-- HERO BANNER -->
     <section class="hero" aria-label="Main offers">
 
       <div class="hero-slide active" data-slide="0">
@@ -67,7 +72,7 @@
       <div class="hero-slide" data-slide="1">
         <img
           src="https://www.aerlingus.com/media/images/content/fleet-new-a321-neo-alt.jpg"
-          alt="Aer Lingus aircraft in flight">
+          alt="Aer Lingus aircraft">
         <div class="hero-shade"></div>
 
         <div class="shell hero-copy">
@@ -86,8 +91,10 @@
       </div>
     </section>
 
+    <!-- BOOKING -->
     <section class="booking-wrap shell" id="booking">
       <div class="booking-card">
+
         <div class="booking-tabs" role="tablist" aria-label="Travel tools">
           <button class="booking-tab active" role="tab" aria-selected="true" data-tab="flights">Find Flights</button>
           <button class="booking-tab" role="tab" aria-selected="false" data-tab="manage">Manage Trip</button>
@@ -97,6 +104,7 @@
 
         <div class="booking-panel active" id="panel-flights" role="tabpanel">
           <form id="flight-search" class="booking-form">
+
             <div class="trip-types" role="group" aria-label="Trip type">
               <label><input type="radio" name="tripType" value="round" checked> Round Trip</label>
               <label><input type="radio" name="tripType" value="one"> One Way</label>
@@ -251,23 +259,32 @@
             <p class="form-message" aria-live="polite"></p>
           </form>
         </div>
+
       </div>
     </section>
 
+    <!-- QUICK LINKS -->
     <section class="shell quick-links">
       <a href="#support">
         <span class="quick-icon">✈</span>
-        <span><b>Essential Travel Information</b><small>Latest travel updates</small></span>
+        <span>
+          <b>Essential Travel Information</b>
+          <small>Latest travel updates</small>
+        </span>
         <span class="chevron">›</span>
       </a>
 
       <a href="#prepare">
         <span class="quick-icon">▣</span>
-        <span><b>10kg carry-on bag options</b><small>Details of our carry-on bag options within Europe</small></span>
+        <span>
+          <b>10kg carry-on bag options</b>
+          <small>Details of our carry-on bag options within Europe</small>
+        </span>
         <span class="chevron">›</span>
       </a>
     </section>
 
+    <!-- TRAVEL INFORMATION -->
     <section class="shell content-section" id="prepare">
       <div class="section-heading">
         <div>
@@ -278,6 +295,7 @@
       </div>
 
       <div class="promo-grid">
+
         <article class="promo-card">
           <img src="https://www.aerlingus.com/media/images/content/smiling-EI-staff-in-airport-curve.jpg" alt="Aer Lingus airport staff">
           <div>
@@ -314,9 +332,11 @@
             <a href="#experience">Find Out More ›</a>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- AIRCRAFT BANNER -->
     <section class="fleet-banner" id="experience">
       <div class="shell fleet-inner">
         <div>
@@ -325,10 +345,14 @@
           <p>Discover the aircraft in our virtual fleet.</p>
           <a class="light-button" href="#fleet">Explore our aircraft</a>
         </div>
-        <img src="https://www.aerlingus.com/media/images/content/fleet-new-a321-neo-alt.jpg" alt="Aer Lingus Airbus A321neo">
+
+        <img
+          src="https://www.aerlingus.com/media/images/content/fleet-new-a321-neo-alt.jpg"
+          alt="Aer Lingus Airbus A321neo">
       </div>
     </section>
 
+    <!-- FLEET -->
     <section class="shell content-section fleet-list" id="fleet">
       <div class="section-heading">
         <div>
@@ -347,6 +371,7 @@
       </div>
     </section>
 
+    <!-- AERCLUB -->
     <section class="newsletter" id="aerclub">
       <div class="shell newsletter-inner">
         <div>
@@ -361,13 +386,18 @@
 
         <form id="newsletter-form">
           <label class="sr-only" for="newsletter-email">Email address</label>
-          <input id="newsletter-email" type="email" placeholder="Enter your email address" required>
+          <input
+            id="newsletter-email"
+            type="email"
+            placeholder="Enter your email address"
+            required>
           <button type="submit">Sign Me Up</button>
           <p class="form-message" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
+    <!-- SUPPORT -->
     <section class="shell content-section support-section" id="support">
       <div class="section-heading">
         <div>
@@ -383,10 +413,13 @@
         <a href="#footer"><b>Booking Information</b><span>›</span></a>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="shell footer-grid">
+
       <div>
         <h3>Help &amp; Support</h3>
         <a href="#support">Contact Us</a>
@@ -417,6 +450,7 @@
         <a href="#join">Join our Roblox group</a>
         <a href="#join">Join our Discord</a>
       </div>
+
     </div>
 
     <div class="shell footer-bottom">
@@ -424,6 +458,7 @@
     </div>
   </footer>
 
+  <!-- JOIN SECTION -->
   <section class="join-panel" id="join">
     <div class="shell join-inner">
       <div>
@@ -431,8 +466,10 @@
         <h2>Join Aer Lingus Roblox</h2>
         <p>Take part in our virtual flights and community.</p>
       </div>
+
       <a class="primary-button" href="#booking">Explore flights</a>
     </div>
   </section>
+
 </body>
 </html>
